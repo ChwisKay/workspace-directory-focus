@@ -1,65 +1,42 @@
-# chwiskayworkspacefocusdirectory README
+# Workspace Directory Focus README
 
-This is the README for your extension "chwiskayworkspacefocusdirectory". After writing up a brief description, we recommend including the following sections.
+This VS Code extension adds a status bar item to give you a quick glance at your workspace directory context. Know whether the file you're working on is in the primary workspace directory or an auxiliary one.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- Status bar text and color changes based on the current file in focus:
+  - 🟢 **Primary dir**: File in focus is in the primary workspace directory.
+  - 🟠 **Aux dir**: file in focus is in an auxiliary workspace directory.
+  - 🟢 **No Aux dir**: there are no auxiliary workspace directories.
+  - 🟢 **No focus**: No files in editor.
+  - 🟢 **No dir**: No directory in workspace.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+None. Just install and it starts working.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+This extension doesn't require any additional settings for now.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+No known issues at the moment. If you find any, feel free to open an issue on GitHub.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+- Initial release with basic functionality.
 
-### 1.0.1
+## For More Information
 
-Fixed issue #.
+- [VS Code's Extension API](https://code.visualstudio.com/api)
+- [GitHub Repository](https://github.com/chriskling/workspace-directory-focus)
 
-### 1.1.0
+### API Hooks Used
 
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- [`vscode.window.activeTextEditor`](https://code.visualstudio.com/api/references/vscode-api#window.activeTextEditor): To check which editor is currently in focus.
+- [`vscode.workspace.workspaceFolders`](https://code.visualstudio.com/api/references/vscode-api#workspace.workspaceFolders): To obtain an array of the workspace folders.
+- [`vscode.StatusBarItem`](https://code.visualstudio.com/api/references/vscode-api#StatusBarItem): To create and manage items in the status bar.
+- [`vscode.window.onDidChangeActiveTextEditor`](https://code.visualstudio.com/api/references/vscode-api#window.onDidChangeActiveTextEditor): Event that fires when the active editor is changed.
