@@ -1,39 +1,37 @@
 {
-  "name": "chwiskayworkspacefocusdirectory",
-  "displayName": "Workspace Focus Directory",
-  "description": "Automatically changes your Visual Studio Code status bar color based on the directory of the active file, enhancing focus and project separation.",
-  "version": "0.0.1",
+  "name": "workspace-directory-focus",
+  "displayName": "Workspace Directory Focus",
+  "publisher": "ChwisKay",
+  "version": "1.0.0",
+  "description": "VS Code extension for indicating workspace directory focus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chriskling/workspace-directory-focus.git"
+  },
   "engines": {
-    "vscode": "^1.83.0"
+    "vscode": "^1.50.0"
   },
   "categories": [
-    "Other"
+    "Visualization"
   ],
   "activationEvents": [
     "onStartupFinished"
   ],
   "main": "./extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "chwiskayworkspacefocusdirectory.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
+  "contributes": {},
   "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.83.0",
-    "@types/mocha": "^10.0.2",
-    "@types/node": "18.x",
-    "eslint": "^8.50.0",
-    "glob": "^10.3.3",
-    "mocha": "^10.2.0",
-    "typescript": "^5.2.2",
-    "@vscode/test-electron": "^2.3.4"
+    "typescript": "^4.0.3",
+    "vscode": "^1.50.0",
+    "tslib": "^2.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "@types/node": "^16.10.1",
+    "@types/mocha": "^9.0.0"
   }
 }
