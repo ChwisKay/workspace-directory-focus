@@ -6,10 +6,11 @@ This VS Code extension adds a status bar item to give you a quick glance at your
 
 - Status bar text and color changes based on the current file in focus:
   - 🟢 **Primary dir**: File in focus is in the primary workspace directory.
-  - 🟠 **Aux dir**: file in focus is in an auxiliary workspace directory.
   - 🟢 **No Aux dir**: there are no auxiliary workspace directories.
   - 🟢 **No focus**: No files in editor.
   - 🟢 **No dir**: No directory in workspace.
+  - 🟠 **Aux dir**: file in focus is in an auxiliary workspace directory.
+  - 🟠 **'filename'**: file in focus is not saved.
 
 ## Requirements
 
@@ -23,16 +24,20 @@ This extension doesn't require any additional settings for now.
 
 No known issues at the moment. If you find any, feel free to open an issue on GitHub.
 
+## Suggestions
+
+If you have any suggestions, feel free to open an issue on GitHub.
+
 ## Release Notes
 
-### 1.0.0
+### 1.1.0
 
-- Initial release with basic functionality.
+- Updated README.md and CHANGELOG.md, added LICENSE.md, logo's and removed redundancies. Added catch for unsaved files. See [CHANGELOG.md](CHANGELOG.md) for more details.
 
 ## For More Information
 
 - [VS Code's Extension API](https://code.visualstudio.com/api)
-- [GitHub Repository](https://github.com/chriskling/workspace-directory-focus)
+- [GitHub Repository](https://github.com/chwiskay/workspace-directory-focus)
 
 ### API Hooks Used
 

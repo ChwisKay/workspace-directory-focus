@@ -3,6 +3,7 @@
   "displayName": "Workspace Directory Focus",
   "publisher": "ChwisKay",
   "version": "1.0.0",
+  "icon": "./WDF.png",
   "description": "VS Code extension for indicating workspace directory focus",
   "repository": {
     "type": "git",
@@ -20,18 +21,19 @@
   "main": "./extension.js",
   "contributes": {},
   "scripts": {
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    "test": "npm run compile && node ./node_modules/@vscode/test-electron/bin/test"
   },
   "devDependencies": {
-    "typescript": "^4.0.3",
-    "vscode": "^1.50.0",
-    "tslib": "^2.0.0",
-    "eslint": "^7.32.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.0",
+    "@types/vscode": "^1.50.0",
+    "@vscode/test-electron": "^1.6.2",
+    "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "mkdirp": "^1.0.4",
     "prettier": "^2.4.1",
-    "@types/node": "^16.10.1",
-    "@types/mocha": "^9.0.0"
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4"
   }
 }
