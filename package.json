@@ -2,7 +2,7 @@
   "name": "workspace-directory-focus",
   "displayName": "Workspace Directory Focus",
   "publisher": "ChwisKay",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "icon": "./WDF.png",
   "description": "VS Code extension for indicating workspace directory focus",
   "repository": {
